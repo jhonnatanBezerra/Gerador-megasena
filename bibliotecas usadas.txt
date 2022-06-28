@@ -1,0 +1,13 @@
+[ COMPONENTE PRONTO DE SELECT ]
+npm install react-native-select-dropdown
+
+[ PARA USAR A NAVEGAÇÃO DO REACT-NATIVE ]
+npm install @react-navigation/native
+npm install @react-navigation/native-stack 
+npm install react-native-screens react-native-safe-area-context
+
+[PACOTE DE ICONES]
+npm install --save react-native-vector-icons
+
+[PARA REQUISIÇÕES HTTP]
+npm install axios
