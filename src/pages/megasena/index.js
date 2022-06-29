@@ -58,10 +58,12 @@ export const Megasena = () => {
       'https://api.random.org/json-rpc/4/invoke',
       config
     )
-    let numerosOrdenados = response.data.result.random.data[0].sort()
+    let numerosOrdenados = response.data.result.random.data[0].sort(
+      (a, b) => a - b
+    )
 
     setCarregando(false)
-    setNumerosSorteados(numerosOrdenados.sort())
+    setNumerosSorteados(numerosOrdenados)
   }
 
   return (
