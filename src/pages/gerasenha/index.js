@@ -73,13 +73,14 @@ export const Gerasenha = () => {
 
         <View
           style={{
-            alignItems: 'flex-start',
-            flexDirection: 'row',
+            alignItems: 'center',
+            flexDirection: 'column',
             paddingHorizontal: 10,
+            flex: 1,
             width: '100%'
           }}
         >
-          <View style={{ width: 70, height: 50 }}>
+          <View style={{ width: 100, height: 50, marginBottom: 10 }}>
             <TextInput
               placeholder=""
               value={tamanhoSenha.toString()}
@@ -108,8 +109,8 @@ export const Gerasenha = () => {
               style={{ width: 150 }}
               value={tamanhoSenha}
               onValueChange={value => setTamanhoSenha(Math.floor(value))}
-              minimumValue={8}
-              maximumValue={15}
+              minimumValue={6}
+              maximumValue={32}
             />
             <Text style={{ marginLeft: 10 }}>{tamanhoSenha}</Text>
           </View>
@@ -142,8 +143,17 @@ export const Gerasenha = () => {
         </View>
       </View>
 
-      <View style={{ width: '100%', alignItems: 'center', marginTop: 20 }}>
-        <Text style={{ fontSize: 22 }}>Senha gerada: {senha}</Text>
+      <View
+        style={{
+          width: '100%',
+          alignItems: 'center',
+          marginTop: 20,
+          paddingHorizontal: 10
+        }}
+      >
+        <Text style={{ fontSize: 22, textAlign: 'center' }}>
+          Senha gerada: {senha}
+        </Text>
       </View>
     </ScrollView>
   )
